@@ -51,7 +51,7 @@
           {
             imports = [ ./module.nix ];
             services.omarchy-screen-mirroring.package =
-              nixpkgs.lib.mkDefault self.packages.${pkgs.system}.doubletake;
+              nixpkgs.lib.mkDefault self.packages.${pkgs.stdenv.hostPlatform.system}.doubletake;
           };
       };
 
